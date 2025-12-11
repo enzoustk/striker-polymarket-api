@@ -2,7 +2,7 @@
 
 **Striker Polymarket API** é uma ferramenta robusta e de alta performance para extração e análise de dados da [Polymarket](https://polymarket.com/). 
 
-Projetada para *traders* e analistas, a biblioteca combina dados da API REST oficial (Gamma/Data API) com o Subgraph (Goldsky/The Graph) para reconstruir históricos de negociação, calcular PnL (Profit and Loss) e analisar o CLV (Customer Lifetime Value) das operações.
+Projetada para *traders* e analistas, a biblioteca combina dados da API REST oficial (Gamma/Data API) com o Subgraph (Goldsky/The Graph) para reconstruir históricos de negociação, calcular PnL (Profit and Loss) e analisar o CLV (Closing Line Value) das operações.
 
 ## 🚀 Funcionalidades Principais
 
