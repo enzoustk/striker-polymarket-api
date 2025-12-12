@@ -14,6 +14,9 @@ def _fetch_market_data(
     """
     (Função original - já estava correta, sem mudanças)
     """
+    if df.empty:
+        return df
+
     unique_slugs = df['slug'].unique()
     all_data_dict = {}
     total_batches = (len(unique_slugs) + batch_size - 1) // batch_size
