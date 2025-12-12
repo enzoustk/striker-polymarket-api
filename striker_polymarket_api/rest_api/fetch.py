@@ -3,8 +3,8 @@ import random
 import requests
 import pandas as pd
 from typing import List, Dict, Any
-from helpers import loading_animation
 from striker_polymarket_api.config import URLS
+from striker_polymarket_api.helpers import loading_animation
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 def _fetch_market_data(

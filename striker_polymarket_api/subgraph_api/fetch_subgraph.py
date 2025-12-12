@@ -2,9 +2,9 @@ import time
 import requests
 import pandas as pd
 from striker_polymarket_api.config import URLS, QUERYS
-from helpers import loading_animation 
-from rest_api.fetch import _fetch_market_data
+from striker_polymarket_api.helpers import loading_animation 
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from striker_polymarket_api.rest_api.fetch import _fetch_market_data
 
 
 def query_graphql(

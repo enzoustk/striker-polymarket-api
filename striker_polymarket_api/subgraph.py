@@ -1,5 +1,5 @@
 import pandas as pd
-from subgraph_api.fetch_subgraph import (
+from striker_polymarket_api.subgraph_api.fetch_subgraph import (
     split_positions,
     get_all_user_positions,
     fetch_positions_from_rest
