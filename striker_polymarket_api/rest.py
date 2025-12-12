@@ -1,9 +1,8 @@
 import requests
 import pandas as pd
-from helpers import safe_divide
-from helpers import assertion_active
 from striker_polymarket_api.config import URLS
 from striker_polymarket_api.rest_api.clv import fetch_clv
+from striker_polymarket_api.helpers import safe_divide, assertion_active
 from striker_polymarket_api.rest_api.price_history import process_dataframe
 from striker_polymarket_api.rest_api.fetch import (
     _fetch_positions_data,
