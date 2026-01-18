@@ -3,7 +3,7 @@ import json
 import requests
 from urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
-from striker_polymarket_api.api.config import URLS
+from stk_polymarket.api.config import URLS
 from loading_animation.animation import loading_animation
 
 def update(

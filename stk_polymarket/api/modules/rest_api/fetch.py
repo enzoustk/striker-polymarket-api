@@ -3,7 +3,7 @@ import random
 import requests
 import pandas as pd
 from typing import List, Dict, Any
-from striker_polymarket_api.api.config import URLS
+from stk_polymarket.api.config import URLS
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from loading_animation.animation import loading_animation
 

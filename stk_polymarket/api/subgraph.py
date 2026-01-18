@@ -7,7 +7,7 @@ fetch_live_pnl_data -> só abertas
 
 
 import pandas as pd
-from striker_polymarket_api.api.modules.subgraph_api.fetch_subgraph import (
+from stk_polymarket.api.modules.subgraph_api.fetch_subgraph import (
     split_positions,
     get_all_user_positions,
     fetch_positions_from_rest
