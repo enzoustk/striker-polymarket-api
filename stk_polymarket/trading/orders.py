@@ -6,7 +6,7 @@ from stk_polymarket.trading.send import send_order
 def fok(
     side: str,
     client: ClobClient,
-    asset: str,
+    token_id: str,
     size: float,
     price: float
     ) -> Optional[Dict[str, Any]]:
@@ -15,7 +15,7 @@ def fok(
         price,
         size,
         side,
-        asset,
+        token_id,
         OrderType.FOK
     )
 
@@ -23,7 +23,7 @@ def fok(
 def fak(
     side,
     client: ClobClient,
-    asset: str,
+    token_id: str,
     price: float,
     size: float
     ) -> Optional[Dict[str, Any]]:
@@ -35,7 +35,7 @@ def fak(
         client=client,
         price=price,
         size=size,
-        asset=asset,
+        token_id=token_id,
         order_type=OrderType.FAK
     )
 
@@ -43,7 +43,7 @@ def fak(
 def gtc(
     side,
     client: ClobClient,
-    asset: str,
+    token_id: str,
     size: float,
     price: float
     ) -> Optional[Dict[str, Any]]:
@@ -53,7 +53,7 @@ def gtc(
         client=client,
         price=price,
         size=size,
-        asset=asset,
+        token_id=token_id,
         order_type=OrderType.GTC
     )
 
@@ -61,7 +61,7 @@ def gtc(
 def gtd(
     side,
     client: ClobClient,
-    asset: str,
+    token_id: str,
     size: float,
     price: float,
     expiration_ts: int
@@ -75,7 +75,7 @@ def gtd(
         client=client,
         price=price,
         size=size,
-        asset=asset,
+        token_id=token_id,
         order_type=OrderType.GTD,
         expiration=expiration_ts
     )
