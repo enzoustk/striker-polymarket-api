@@ -1,7 +1,7 @@
-from trading.send import send_order
 from typing import Optional, Dict, Any
 from py_clob_client.client import ClobClient
 from py_clob_client.clob_types import OrderType
+from stk_polymarket.trading.send import send_order
 
 def fok(
     side: str,
