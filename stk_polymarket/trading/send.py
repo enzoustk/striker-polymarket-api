@@ -46,16 +46,15 @@ def send_order(
         error_body = str(raw_error).lower()
         status_code = getattr(e, "status_code", 0)
 
-        # Filtro de Saldo
+        # Filtro de Saldo REAL (apenas se a mensagem falar explicitamente de saldo)
         balance_keywords = ["not enough balance", "insufficient funds", "allowance", "insufficient"]
         
-        if status_code == 400 or any(k in error_body for k in balance_keywords):
-            print(f"Not enough USDC. ignoring...") 
+        # MUDANÇA AQUI: Só acusa saldo se a mensagem contiver as palavras-chave.
+        # Se for apenas 400 genérico, deixa passar para o print de baixo.
+        if any(k in error_body for k in balance_keywords):
+            print(f"⚠️ Saldo/Allowance insuficiente (Real).") 
             return None
 
-        print(f"PolyApi Error [{status_code}]: {error_body}")
-        return None
-
-    except Exception as e:
-        print(f"Error sending order: {e}")
+        # Agora vamos ver o erro real!
+        print(f"❌ Erro na API [{status_code}]: {raw_error}")
         return None
